@@ -13,7 +13,39 @@
  *= require_tree .
  *= require_self
  */
- body { padding-top: 100px; }
- footer { margin-top: 100px; }
+body { padding-top: 60px; 
+  background-color: #FFFF99;
+}
+
+footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient( rgba(240, 212, 0, 0.45), rgba(0, 0, 0, 0.45) ), /* image to overlay */ url(http://images.cdn.fotopedia.com/_avPIZmqM3w-7z161LH_268-hd.jpg);
+}
  table, td, th { vertical-align: middle; border: none; }
  th { border-bottom: 1px solid #DDD; }
+
+
+ .navbar {
+    min-height: 38px;
+    background-color: #111111;
+    background-image: none !important;
+  }
+
+.navbar a.brand { font-size: 20px; }
+.navbar a.brand:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+
+#info {
+  border-top: 1px solid rosybrown;
+  padding-top: 20px;
+}

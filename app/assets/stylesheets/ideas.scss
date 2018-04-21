@@ -1,3 +1,25 @@
 // Place all the styles related to the ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container a:hover {
+    color: #f55e55;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .card {
+    border: 1px solid #ededed;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+    background: #CCFFCC;
+}
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card .card-body {
+    padding: 1.5rem 1.5rem 0;
+}
+.card-body {
+    flex: 1 1 auto;
+}

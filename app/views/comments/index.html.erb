@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align: center">Comments</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Body</th>
+      <th>Idea</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user_name %></td>
+        <td><%= comment.body %></td>
+        <td><%= comment.idea_id %></td>
+        <td><%= link_to 'Show&nbsp;<i class="glyphicon glyphicon-list-alt"></i>'.html_safe, comment %></td>
+        <td><%= link_to 'Edit&nbsp;<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_comment_path(comment) %></td>
+        <td><%= link_to 'Delete&nbsp;<i class="glyphicon glyphicon-remove"></i>'.html_safe, comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path %>

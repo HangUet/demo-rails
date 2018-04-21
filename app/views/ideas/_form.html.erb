@@ -10,23 +10,39 @@
       </ul>
     </div>
   <% end %>
+  <div class="row row-flex">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 form-group">
+      
+      <div class="col-md-2">
+        <%= form.label :name %>
+      </div>
+      <div class="col-md-10">
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+      <div class="col-md-2">
+        </br>
+        <%= form.label :description %>
+      </div>
+      <div class="col-md-10">
+        </br>
+        <%= form.text_area :description, class: "form-control" %>
+      </div>
+      <div class="col-md-2">
+        </br>     
+        <%= form.label :picture %>
+      </div>
+      <div class="col-md-10">
+        </br>
+        <%= form.file_field :picture, id: :idea_picture %>
+      </div>
+      <div class="col-md-12">
+        </br>
+        <center><%= form.submit "Create Idea", class:" btn btn-success" %></center>
+        
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :picture, id: :idea_picture %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  
 <% end %>

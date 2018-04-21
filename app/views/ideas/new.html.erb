@@ -1,5 +1,13 @@
-<h1>New Idea</h1>
+<h1 style="text-align: center; padding-bottom: 10px">New Idea</h1>
 
 <%= render 'form', idea: @idea %>
+</br>
+<div class="row row-flex">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+  <center>
+    <%= link_to '<i class="glyphicon glyphicon-backward"></i>&nbsp;Back'.html_safe, ideas_path, class:"btn btn-default" %>
+  </center>  
+  </div>
+</div>
 
-<%= link_to 'Back', ideas_path %>

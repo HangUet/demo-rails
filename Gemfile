@@ -6,8 +6,9 @@ ruby '2.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 gem 'carrierwave'
+gem 'mini_magick', '3.8.0'
 gem 'net-ssh'
 # Use Puma as the app server
 gem 'puma'
@@ -34,6 +35,9 @@ gem 'jbuilder'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
+gem 'activeadmin'
+gem 'inherited_resources'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -60,5 +64,14 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'mysql2'
+gem 'gravtastic'
